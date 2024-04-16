@@ -58,8 +58,8 @@ public class ActionsServlet extends HttpServlet {
     } catch (InterruptedException e) {
       handleError(res, e);
     } catch (ExecutionException e) {
-      handleError(res, e);
-    }
+      handleError(res, e.printStackTrace());
+    }vf
   }
 
   @Override
