@@ -117,7 +117,7 @@ public class TipService {
     checkNotNull(category, "category cannot be null.");
     CollectionReference tipsRef = db.collection("tips");
     ApiFuture<QuerySnapshot> query;
-    if (!category.equals("random")) {
+    if (!"random".equals(category)) {
       query = tipsRef.whereEqualTo("category", category).get();
     } else {
       query = tipsRef.get();
